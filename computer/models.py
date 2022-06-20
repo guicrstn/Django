@@ -1,7 +1,16 @@
 from django.db import models
 
 class Interface(models.Model):
-    
+    '''
+    Class: Interface
+    Description: Classe qui permet de repertorié:
+    - Nom
+    - Addr
+    - IP
+    - Masque de sous réseaux
+    - Passerelle
+    - Adresse mac
+    '''
     name    = models.CharField(max_length=255,default=None)
     addr    = models.CharField(max_length=255,default=None)
     IP      = models.CharField(max_length=255,default=None)
@@ -26,6 +35,15 @@ class Interface(models.Model):
 
 
 class Computer(models.Model):
+    '''
+    Class: Computer
+    Description: Classe qui permet de repertorié:
+    - Nom
+    - Espace disque total
+    - Espace disque restant
+    - Espace disque utilisé 
+
+    '''
     name    = models.CharField(max_length=255,default=None)
     total   = models.FloatField(default=None)
     free    = models.FloatField(default=None)
