@@ -27,18 +27,27 @@ Le résultat final :
 SYSTEME D'EXPLOITATION
 
 Système d'exploitation............ Linux
+
 Version du sytème d'exploitation.. linux-x86_64
+
 Taille des bits du système........ x86_64
+
 Interface <<<
 
 Adresse IP ....................... 0.0.0.0
+
 Masque de sous réseaux............ 255.0.0.0
+
 Passerelle par défault............ 0.0.0.0
+
 Adresse MAC....................... 00:00:00:00:00:00
+
 Information disque <<<
 
 Taille total...................... 1 GiB
+
 Taille utilisé.................... 1 GiB
+
 Taille disponible................. 0 GiB
 
 Ce project me permettra donc d'entrer les informations d'une machine sur une base de données.
