@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Interface(models.Model):
     '''
     Class: Interface
@@ -42,7 +43,6 @@ class Computer(models.Model):
     - Espace disque total
     - Espace disque restant
     - Espace disque utilisé 
-
     '''
     name    = models.CharField(max_length=255,default=None)
     total   = models.FloatField(default=None)
@@ -59,4 +59,19 @@ class Computer(models.Model):
         return self.free // (2**30)
     def getname(self):
         return self.name
-    
+'''
+class Plateau(models.Model):
+    plateau_name = models.CharField((u'Nom du plateau technique'), max_length=200)
+ 
+    def __unicode__(self):
+            return self.plateau_name
+ 
+class Automate(models.Model):
+    automate_name = models.CharField((u'Nom de l\'automate'), max_length=200)
+    automate_site = models.ManyToManyField(Plateau, db_column='automate_site', verbose_name="Plateau de l'automate")
+ 
+    def __unicode__(self):
+            return self.automate_name
+  '''
+
+        
