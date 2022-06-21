@@ -41,7 +41,7 @@ class Computer(models.Model):
     Description: Classe qui permet de repertorié:
     - Nom
     - Espace disque total
-    - Espace disque restant
+    - Espace disque restant 
     - Espace disque utilisé 
     '''
     name    = models.CharField(max_length=255,default=None)
@@ -59,19 +59,8 @@ class Computer(models.Model):
         return self.free // (2**30)
     def getname(self):
         return self.name
-'''
-class Plateau(models.Model):
-    plateau_name = models.CharField((u'Nom du plateau technique'), max_length=200)
- 
-    def __unicode__(self):
-            return self.plateau_name
- 
-class Automate(models.Model):
-    automate_name = models.CharField((u'Nom de l\'automate'), max_length=200)
-    automate_site = models.ManyToManyField(Plateau, db_column='automate_site', verbose_name="Plateau de l'automate")
- 
-    def __unicode__(self):
-            return self.automate_name
-  '''
 
-        
+class Resultat(models.Model):
+    name    = models.CharField(max_length=255,default=None)     
+    def getname(self):
+            return self.name
