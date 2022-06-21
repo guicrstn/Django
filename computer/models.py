@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.db import models
 
 
@@ -20,7 +21,7 @@ class Interface(models.Model):
     Mac     = models.CharField(max_length=255,default=None)
 
     def __str__(self) -> str:
-        return f'{self.addr}, {self.IP}, {self.Subnet}, {self.Gateway}, {self.Mac}'
+        return f'{self.name}'
     def getaddr(self):
         return self.addr
     def getip(self):
@@ -48,7 +49,7 @@ class Computer(models.Model):
     total   = models.FloatField(default=None)
     free    = models.FloatField(default=None)
     used    = models.FloatField(default=None)
-
+        
     def __str__(self) -> str:
         return '{}, {}, {}, {}'.format(self.name, self.total, self.free, self.used)
     def totaldisk(self):
@@ -60,7 +61,3 @@ class Computer(models.Model):
     def getname(self):
         return self.name
 
-class Resultat(models.Model):
-    name    = models.CharField(max_length=255,default=None)     
-    def getname(self):
-            return self.name
