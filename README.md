@@ -2,52 +2,12 @@ ROJET BTS Systèmes numérique
 
 Le but ?
 
-Créer un projet qui relie developpement et réseaux dans un seul et même projet.
+Recuperer les donnees du precedent projet pour les retroyver dans mes cellules sur django.
 
-Récupérer les informations d'un PC
+Il y a donc 2 classe de creer, computer et interface
 
--> Système d'exploitation
+computer : permet de renseigner les donnees systeme recuperer auparavant et les televerser.
 
-Nom du système
-Version du sytème
-Taille des bits du système
--> Interface
+interface : permet de récuperer les données reseaux du poste puis les téléverser.
 
-Adresse IP
-Masque de sous réseaux
-Passerelle par défault
-Adresse MAC
--> Information disque
-
-Taille total
-Taille utilisé
-Taille disponible
-Le résultat final :
-
-SYSTEME D'EXPLOITATION
-
-Système d'exploitation............ Linux
-
-Version du sytème d'exploitation.. linux-x86_64
-
-Taille des bits du système........ x86_64
-
-Interface <<<
-
-Adresse IP ....................... 0.0.0.0
-
-Masque de sous réseaux............ 255.0.0.0
-
-Passerelle par défault............ 0.0.0.0
-
-Adresse MAC....................... 00:00:00:00:00:00
-
-Information disque <<<
-
-Taille total...................... 1 GiB
-
-Taille utilisé.................... 1 GiB
-
-Taille disponible................. 0 GiB
-
-Ce project me permettra donc d'entrer les informations d'une machine sur une base de données.
+Ce project me permettra donc d'entrer les informations d'une machine sur une base de données et ainsi repertorier chaques machines avec leurs informations respectives. 
