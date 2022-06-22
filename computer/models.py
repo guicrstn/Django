@@ -61,3 +61,10 @@ class Computer(models.Model):
     def getname(self):
         return self.name
 
+class Client(models.Model):
+    name    = models.CharField(max_length=255,default=None)
+    username= models.CharField(max_length=255,default=None)
+    def getname(self):
+        return self.name
+    def getname(self):
+        return self.username
